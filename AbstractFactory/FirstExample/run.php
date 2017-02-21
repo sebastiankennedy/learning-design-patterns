@@ -14,3 +14,5 @@ $ttdEncoder = $manager->getTtdEncoder();
 $contactEncoder = $manager->getContactEncoder();
 
 echo $apptEncoder->encode();
+echo $ttdEncoder->encode();
+echo $contactEncoder->encode();
