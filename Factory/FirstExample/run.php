@@ -9,6 +9,6 @@ function autoload($class)
 
 use Factory\FirstExample\MegaCommsManager;
 
-$mage = new MegaCommsManager();
-$encoder = $mage->getApptEncoder();
+$mega = new MegaCommsManager();
+$encoder = $mega->getApptEncoder();
 echo $encoder->encode();

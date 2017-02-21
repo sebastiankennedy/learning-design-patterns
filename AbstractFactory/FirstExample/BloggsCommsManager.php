@@ -1,0 +1,3 @@
+<?php
+namespace AbstractFactory\FirstExample;
+

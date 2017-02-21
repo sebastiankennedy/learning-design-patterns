@@ -1,6 +1,7 @@
 <?php
 namespace Factory\FirstExample;
 
+use Factory\FirstExample\ApptEncoder;
 use Factory\FirstExample\CommsManager;
 use Factory\FirstExample\BloggsApptEncoder;
 
@@ -11,7 +12,7 @@ class BloggsCommsManager extends CommsManager
         return "BloggsCal header.\n";
     }
 
-    public function getApptEncoder()
+    public function getApptEncoder():ApptEncoder
     {
         return new BloggsApptEncoder;
     }
