@@ -1,6 +1,5 @@
 <?php
-
-// 注册自加载
+// 注册自动加载
 spl_autoload_register('autoload');
 function autoload($class)
 {
