@@ -1,8 +1,5 @@
 <?php
-namespace Composite\Example;
-
-use Composite\FirstExample\Cavalry;
-use Composite\FirstExample\CompositeUnit;
+namespace Composite\FirstExample;
 
 class TroopCarrier extends CompositeUnit
 {

@@ -1,5 +1,5 @@
 <?php
-namespace Composite\Example;
+namespace Composite\FirstExample;
 
 abstract class Unit
 {
