@@ -1,8 +1,6 @@
 <?php
 namespace Composite\FirstExample;
 
-use Composite\FirstExample\CompositeUnit;
-
 class Army extends CompositeUnit
 {
     public function bombardStrength()

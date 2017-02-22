@@ -1,8 +1,6 @@
 <?php
 namespace Composite\FirstExample;
 
-use Composite\Example\Unit;
-
 abstract class CompositeUnit extends Unit
 {
     private $units = [];
