@@ -3,5 +3,5 @@ namespace Decorator\FirstExample;
 
 abstract class Tile
 {
-    abstract public function getWealthFactor();
+    abstract public function getWealthFactor() : int;
 }

@@ -5,7 +5,7 @@ class Plains extends Tile
 {
     private $wealthFactor = 2;
 
-    public function getWealthFactor()
+    public function getWealthFactor() : int
     {
         return $this->wealthFactor;
     }
