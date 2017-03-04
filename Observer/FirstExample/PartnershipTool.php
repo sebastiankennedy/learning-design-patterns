@@ -1,10 +1,10 @@
 <?php
-namespace Observer\SecondExample;
+namespace Observer\FirstExample;
 
 class PartnershipTool extends LoginObserver
 {
     public function doUpdate(Login $login)
     {
-        echo __CLASS__ . " : set cookie if IP matches a list\n";
+        echo __CLASS__ . ": \t set cookie if IP matches a list\n";
     }
 }

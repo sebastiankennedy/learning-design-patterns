@@ -1,10 +1,10 @@
 <?php
-namespace Observer\FirstExample;
+namespace Observer\SecondExample;
 
-class SecurityMonitor implements Observer
+class SecurityMonitor extends LoginObserver
 {
-    public function update(Observable $observable)
+    public function doUpdate(Login $login)
     {
-        echo __CLASS__ . ": \t sending mail to sysadmin\n";
+        echo __CLASS__ . " : sending mail to sysadmin\n";
     }
 }
