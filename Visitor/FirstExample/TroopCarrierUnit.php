@@ -1,7 +1,7 @@
 <?php
 namespace Visitor\FirstExample;
 
-class TroopCarrier extends CompositeUnit
+class TroopCarrierUnit extends CompositeUnit
 {
     public function addUnit(Unit $unit)
     {

@@ -1,7 +1,7 @@
 <?php
 namespace Visitor\FirstExample;
 
-class LaserCanon extends Unit
+class LaserCannonUnit extends Unit
 {
     public function bombardStrength()
     {

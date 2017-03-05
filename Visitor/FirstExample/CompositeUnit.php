@@ -1,5 +1,5 @@
 <?php
-namespace Composite\FirstExample;
+namespace Visitor\FirstExample;
 
 abstract class CompositeUnit extends Unit
 {
@@ -22,7 +22,16 @@ abstract class CompositeUnit extends Unit
         if (in_array($unit, $this->units, true)) {
             return '';
         }
+        $unit->setDepth($this->depth + 1);
         $this->units[] = $unit;
+    }
+
+    public function accept(ArmyVisitor $visitor)
+    {
+        parent::accept($visitor);
+        foreach ($this->units as $thisUnit) {
+            $thisUnit->accept($visitor);
+        }
     }
 
     protected function units()

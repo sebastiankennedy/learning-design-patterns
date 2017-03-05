@@ -1,5 +1,5 @@
 <?php
-namespace Composite\FirstExample;
+namespace Visitor\FirstExample;
 
 class Army extends CompositeUnit
 {

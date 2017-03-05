@@ -1,8 +1,12 @@
 <?php
-namespace Composite\FirstExample;
+namespace Visitor\FirstExample;
 
 abstract class Unit
 {
+    public $depth;
+
+    abstract public function bombardStrength();
+
     public function getComposite()
     {
         return null;
@@ -18,5 +22,19 @@ abstract class Unit
         throw new \Exception(get_class($this) . " is a leaf.");
     }
 
-    abstract public function bombardStrength();
+    public function accept(ArmyVisitor $visitor)
+    {
+        $method = "visit" . get_class($this);
+        $visitor->$method($this);
+    }
+
+    public function getDepth()
+    {
+        return $this->depth;
+    }
+
+    public function setDepth($depth)
+    {
+        $this->depth = $depth;
+    }
 }
