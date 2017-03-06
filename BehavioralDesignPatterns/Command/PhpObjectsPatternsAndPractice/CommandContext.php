@@ -2,6 +2,7 @@
 
 namespace BehavioralDesignPatterns\Command\PhpObjectsPatternsAndPractice;
 
+// 命令接受者
 class CommandContext
 {
     private $params = [];
