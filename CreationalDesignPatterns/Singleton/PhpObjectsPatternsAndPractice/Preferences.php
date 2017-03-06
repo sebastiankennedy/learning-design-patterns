@@ -1,5 +1,5 @@
 <?php
-namespace Singleton\FirstExample;
+namespace CreationalDesignPatterns\Singleton\PhpObjectsPatternsAndPractice;
 
 class Preferences
 {
