@@ -17,7 +17,7 @@ $context->addParam('password', '123456');
 $controller->process();
 
 
-$context->addParam('action', 'send');
+$context->addParam('action', 'feedback');
 $context->addParam('email', 'LuisEdward@qq.com');
 $context->addParam('message', 'Hello Command Pattern');
 $context->addParam('topic', 'Design Patterns');

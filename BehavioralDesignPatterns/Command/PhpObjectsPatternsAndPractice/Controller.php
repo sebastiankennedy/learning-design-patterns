@@ -25,9 +25,9 @@ class Controller
         }
 
         if (!$command->execute($this->context)) {
-            echo "execute fail !";
+            echo "execute fail !\n";
         } else {
-            echo "execute success !";
+            echo "execute success !\n";
         }
     }
 }
