@@ -8,11 +8,11 @@ class FeedbackCommand extends Command
     {
         $msgSystem = Registry::getMessageManager();
         $email = $context->get('email');
-        $msg = $context->get('msg');
         $topic = $context->get('topic');
-        $result = $msgSystem->send($email, $msg, $topic);
+        $message = $context->get('message');
+        $result = $msgSystem->send($email, $message, $topic);
 
-        if ( ! $result) {
+        if (!$result) {
             $context->setError($msgSystem->getError());
             return false;
         }
