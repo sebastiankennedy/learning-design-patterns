@@ -2,6 +2,7 @@
 
 namespace BehavioralDesignPatterns\Command\PhpObjectsPatternsAndPractice;
 
+// 命令调用者
 class Controller
 {
     private $context;
@@ -11,7 +12,7 @@ class Controller
         $this->context = new CommandContext();
     }
 
-    public function getContext()
+    public function getContext() :CommandContext
     {
         return $this->context;
     }

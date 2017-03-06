@@ -2,9 +2,10 @@
 
 namespace BehavioralDesignPatterns\Command\PhpObjectsPatternsAndPractice;
 
+// 具体命令类
 class FeedbackCommand extends Command
 {
-    public function execute(CommandContext $context)
+    public function execute(CommandContext $context) : bool
     {
         $msgSystem = Registry::getMessageManager();
         $email = $context->get('email');

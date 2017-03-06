@@ -2,9 +2,10 @@
 
 namespace BehavioralDesignPatterns\Command\PhpObjectsPatternsAndPractice;
 
+// 具体命令类
 class LoginCommand extends Command
 {
-    public function execute(CommandContext $context)
+    public function execute(CommandContext $context) : bool
     {
         $manager = Registry::getAccessManager();
         $user = $context->get('username');
