@@ -7,6 +7,7 @@ class AccessManager
     public function login($username, $password)
     {
         if ($username === 'Red Queen' && $password === '123456') {
+            echo "User Sign In Successfully !";
             return ['username' => $username, 'password' => $password];
         }
 

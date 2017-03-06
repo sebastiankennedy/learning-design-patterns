@@ -7,7 +7,8 @@ class MessageSystem
     public function send($email, $message, $topic)
     {
         if ($email === 'LuisEdward@qq.com' && $message === 'Hello Command Pattern' && $topic === 'Design Patterns') {
-            return $email . $message . $topic . 'Send Email Successfully !';
+            echo "Send Email Successfully !";
+            return ['email' => $email, ',message' => $message, 'topic' => $topic];
         }
     }
 

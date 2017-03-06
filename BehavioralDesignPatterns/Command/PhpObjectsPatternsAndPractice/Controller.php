@@ -18,13 +18,13 @@ class Controller
 
     public function process()
     {
-        $cmd = CommandFactory::getCommand($this->context->get('action'));
+        $command = CommandFactory::getCommand($this->context->get('action'));
 
-        if (!$cmd instanceof Command) {
+        if (!$command instanceof Command) {
             echo "execute is not instanceof Command Class !";
         }
 
-        if (!$cmd->execute($this->context)) {
+        if (!$command->execute($this->context)) {
             echo "execute fail !";
         } else {
             echo "execute success !";
