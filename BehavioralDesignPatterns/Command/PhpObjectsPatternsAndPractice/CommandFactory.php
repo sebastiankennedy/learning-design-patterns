@@ -6,17 +6,16 @@ use Exception;
 
 class CommandFactory
 {
-    private static $dir = 'commands';
+    private static $dir = '';
 
     public static function getCommand($action = 'Default')
     {
-        if (preg_match('/\w/', $action)) {
+        if (preg_match('/\W/', $action)) {
             throw new Exception("illegal characters in action");
         }
 
         $class = ucfirst(strtolower($action)) . "Command";
-        $file = self::$dir . DIRECTORY_SEPARATOR . "{$class}.php";
-
+        $file = self::$dir . "{$class}.php";
         if (!file_exists($file)) {
             throw new CommandNotFoundException("could not find '$file'");
         }

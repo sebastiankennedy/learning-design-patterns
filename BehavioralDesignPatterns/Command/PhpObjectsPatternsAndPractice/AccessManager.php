@@ -4,10 +4,11 @@ namespace BehavioralDesignPatterns\Command\PhpObjectsPatternsAndPractice;
 
 class AccessManager
 {
-    public function login($user, $pass)
+    public function login($username, $password)
     {
-        if ($user === 'Red Queen' && $pass === '123456') {
-            return $user . $pass . "Sign In Successfully !\n";
+        if ($username === 'Red Queen' && $password === '123456') {
+            echo $username . $password . "Sign In Successfully !\n";
+            return ['username' => $username, 'password' => $password];
         }
 
         return false;

@@ -8,15 +8,15 @@ class LoginCommand extends Command
     {
         $manager = Registry::getAccessManager();
         $user = $context->get('username');
-        $pass = $context->get('pass');
-        $userObj = $manager->login($user, $pass);
+        $pass = $context->get('password');
+        $userInfo = $manager->login($user, $pass);
 
-        if (is_null($userObj)) {
+        if (is_null($userInfo)) {
             $context->setError($manager->getError());
             return false;
         }
 
-        $context->addParam('user', $userObj);
+        $context->addParam('user', $userInfo);
         return true;
     }
 }
