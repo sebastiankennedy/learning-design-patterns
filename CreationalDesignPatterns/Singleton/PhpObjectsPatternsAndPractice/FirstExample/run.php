@@ -9,7 +9,7 @@ function autoload($class)
 use CreationalDesignPatterns\Singleton\PhpObjectsPatternsAndPractice\FirstExample\Preferences;
 
 $preference = Preferences::getInstance();
-$preference->setProperty('name', 'Luis Edware');
+$preference->setProperty('name', 'Luis Edward');
 
 unset($preference);
 
