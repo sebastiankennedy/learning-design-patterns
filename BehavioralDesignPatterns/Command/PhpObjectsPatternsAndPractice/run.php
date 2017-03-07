@@ -11,6 +11,7 @@ use BehavioralDesignPatterns\Command\PhpObjectsPatternsAndPractice\Controller;
 
 $controller = new Controller();
 $context = $controller->getContext();
+    
 $context->addParam('action', 'login');
 $context->addParam('username', 'Red Queen');
 $context->addParam('password', '123456');
