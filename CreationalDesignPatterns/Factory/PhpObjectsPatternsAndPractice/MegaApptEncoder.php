@@ -1,5 +1,5 @@
 <?php
-namespace Factory\FirstExample;
+namespace CreationalDesignPatterns\Factory\HeadFirst;
 
 class MegaApptEncoder extends ApptEncoder
 {

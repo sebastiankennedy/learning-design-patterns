@@ -1,5 +1,5 @@
 <?php
-namespace Factory\FirstExample;
+namespace CreationalDesignPatterns\Factory\HeadFirst;
 
 class BloggsApptEncoder extends ApptEncoder
 {

@@ -1,9 +1,8 @@
 <?php
-// 注册自动加载
 spl_autoload_register('autoload');
 function autoload($class)
 {
-    require '../../' . str_replace('\\', '/', $class) . '.php';
+    require '../../../' . str_replace('\\', '/', $class) . '.php';
 }
 
 use Factory\FirstExample\MegaCommsManager;
