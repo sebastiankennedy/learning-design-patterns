@@ -6,8 +6,8 @@ class ChicagoStyleVeggiePizza extends Pizza
     public function __construct()
     {
         $this->name = "ChicagoStyleVeggiePizza";
-        $this->dough = "Veggie Dough";
-        $this->sauce = "Veggie Sauce";
-        $this->toppings[] = "Veggie Topping";
+        $this->dough = "ChicagoStyle Veggie Dough";
+        $this->sauce = "ChicagoStyle Veggie Sauce";
+        $this->toppings[] = "ChicagoStyle Veggie Topping";
     }
 }

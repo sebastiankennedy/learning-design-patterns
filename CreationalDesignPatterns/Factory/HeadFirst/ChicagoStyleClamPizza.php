@@ -6,8 +6,8 @@ class ChicagoStyleClamPizza extends Pizza
     public function __construct()
     {
         $this->name = "ChicagoStyleClamPizza";
-        $this->dough = "Clam Dough";
-        $this->sauce = "Clam Sauce";
-        $this->toppings[] = "Clam Topping";
+        $this->dough = "ChicagoStyle Clam Dough";
+        $this->sauce = "ChicagoStyle Clam Sauce";
+        $this->toppings[] = "ChicagoStyle Clam Topping";
     }
 }

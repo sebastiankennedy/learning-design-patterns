@@ -30,12 +30,12 @@ abstract class Pizza
         printf("Cutting the pizza into diagnoal slices\n");
     }
 
-    public function box()
+    public function box() : void
     {
         printf("Place pizza in official PizzaStore box\n");
     }
 
-    public function getName()
+    public function getName() : string
     {
         return $this->name;
     }

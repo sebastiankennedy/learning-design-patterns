@@ -6,8 +6,8 @@ class ChicagoStylePepperoniPizza extends Pizza
     public function __construct()
     {
         $this->name = "ChicagoStylePepperoniPizza";
-        $this->dough = "Pepperoni Dough";
-        $this->sauce = "Pepperoni Sauce";
-        $this->toppings[] = "Pepperoni Topping";
+        $this->dough = "ChicagoStyle Pepperoni Dough";
+        $this->sauce = "ChicagoStyle Pepperoni Sauce";
+        $this->toppings[] = "ChicagoStyle Pepperoni Topping";
     }
 }
