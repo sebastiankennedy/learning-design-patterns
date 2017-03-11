@@ -1,5 +1,5 @@
 <?php
-namespace Decorator\SecondExample;
+namespace StructuralDesignPatterns\Decorator\PhpObjectsPatternsAndPractice\SecondExample;
 
 abstract class DecorateProcess extends ProcessRequest
 {

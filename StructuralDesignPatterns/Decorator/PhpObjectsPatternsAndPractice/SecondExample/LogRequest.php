@@ -1,5 +1,5 @@
 <?php
-namespace Decorator\SecondExample;
+namespace StructuralDesignPatterns\Decorator\PhpObjectsPatternsAndPractice\SecondExample;
 
 class LogRequest extends DecorateProcess
 {

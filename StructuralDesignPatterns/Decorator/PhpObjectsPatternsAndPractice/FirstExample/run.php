@@ -4,13 +4,14 @@ spl_autoload_register('autoload');
 
 function autoload($class)
 {
-    require "../../" . str_replace('\\', '/', $class) . '.php';
+    require "../../../../" . str_replace('\\', '/', $class) . '.php';
 }
 
-use Decorator\FirstExample\Plains;
-use Decorator\FirstExample\DiamondDecorator;
-use Decorator\FirstExample\PollutedDecorator;
-
+use StructuralDesignPatterns\Decorator\PhpObjectsPatternsAndPractice\FirstExample\{
+    Plains,
+    DiamondDecorator,
+    PollutedDecorator
+};
 
 $tile = new Plains();
 echo $tile->getWealthFactor() . "\n";

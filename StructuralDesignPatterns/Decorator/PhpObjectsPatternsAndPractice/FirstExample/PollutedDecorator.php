@@ -1,5 +1,5 @@
 <?php
-namespace Decorator\FirstExample;
+namespace StructuralDesignPatterns\Decorator\PhpObjectsPatternsAndPractice\FirstExample;
 
 class PollutedDecorator extends TileDecorator
 {
