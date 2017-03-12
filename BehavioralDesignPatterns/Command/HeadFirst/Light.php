@@ -5,11 +5,11 @@ class Light
 {
     public function on() : void
     {
-        echo "The light is on";
+        echo "The light is on.\n";
     }
 
     public function off() : void
     {
-        echo "The light is off";
+        echo "The light is off.\n";
     }
 }
