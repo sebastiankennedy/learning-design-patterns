@@ -27,3 +27,8 @@ $remoteControl = new RemoteControl();
 $remoteControl->setCommand(0, $lightOnCommand, $lightOffCommand);
 $remoteControl->setCommand(1, $stereoOnWithCDCommand, $stereoOffCommand);
 print($remoteControl);
+
+echo $remoteControl->onButtonWasPushed(0) . "\n";
+echo $remoteControl->offButtonWasPushed(0) . "\n";
+echo $remoteControl->onButtonWasPushed(1) . "\n";
+echo $remoteControl->offButtonWasPushed(1) . "\n";
