@@ -26,4 +26,4 @@ $stereoOffCommand = new StereoOffCommand($stereo);
 $remoteControl = new RemoteControl();
 $remoteControl->setCommand(0, $lightOnCommand, $lightOffCommand);
 $remoteControl->setCommand(1, $stereoOnWithCDCommand, $stereoOffCommand);
-echo $remoteControl;
+print($remoteControl);

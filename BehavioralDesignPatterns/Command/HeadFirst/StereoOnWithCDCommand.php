@@ -14,6 +14,11 @@ class StereoOnWithCDCommand implements Command
     {
         $this->stereo->on();
         $this->stereo->setCd();
-        $this->stereo->setVolume(11);
+        $this->stereo->setVolume(10);
+    }
+
+    public function undo() : void
+    {
+        $this->stereo->off();
     }
 }
