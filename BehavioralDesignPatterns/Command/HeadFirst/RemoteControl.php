@@ -27,4 +27,14 @@ class RemoteControl
     {
         $this->offCommand[$slot]->execute();
     }
+
+    public function __toString() : string
+    {
+        $string = "";
+        foreach (range(0, count($this->onCommand) - 1) as $slot) {
+            $string .= $this->onCommand[$slot]->execute() . "    " . $this->offCommand[$slot]->execute();
+        }
+
+        return $string;
+    }
 }
