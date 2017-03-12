@@ -3,5 +3,5 @@ namespace BehavioralDesignPatterns\Command\HeadFirst;
 
 interface Command
 {
-    public function execute();
+    public function execute() : void;
 }

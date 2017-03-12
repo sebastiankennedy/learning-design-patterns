@@ -32,7 +32,8 @@ class RemoteControl
     {
         $string = "";
         foreach (range(0, count($this->onCommand) - 1) as $slot) {
-            $string .= $this->onCommand[$slot]->execute() . "    " . $this->offCommand[$slot]->execute();
+            $string .= get_class($this->onCommand[$slot]) . "\n"
+                . get_class($this->offCommand[$slot]) . "\n";
         }
 
         return $string;

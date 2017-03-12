@@ -1,7 +1,7 @@
 <?php
 namespace BehavioralDesignPatterns\Command\HeadFirst;
 
-class StereoOnWithCDCommand implements Command
+class StereoOffCommand implements Command
 {
     public $stereo;
 
@@ -12,8 +12,6 @@ class StereoOnWithCDCommand implements Command
 
     public function execute() : void
     {
-        $this->stereo->on();
-        $this->stereo->setCd();
-        $this->stereo->setVolume(11);
+        $this->stereo->off();
     }
 }
