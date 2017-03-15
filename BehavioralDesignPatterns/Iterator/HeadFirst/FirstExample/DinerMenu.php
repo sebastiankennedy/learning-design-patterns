@@ -1,8 +1,6 @@
 <?php
 namespace BehavioralDesignPatterns\Iterator\HeadFirst\FirstExample;
 
-use BehavioralDesignPatterns\Iterator\HeadFirst\DinerMenuIterator;
-
 class DinerMenu
 {
     const MAX_ITEMS = 6;
@@ -11,7 +9,7 @@ class DinerMenu
 
     public function __construct()
     {
-        $this->menuItems[self::MAX_ITEMS] = "";
+        $this->menuItems[self::MAX_ITEMS] = null;
         $this->addItem("Vegetarian BLT", "(Fakin) Bcaon with lettuce & tomato on whole wheat", true, 2.99);
         $this->addItem("BLT", "Bacon with lettuce & tomato on whole wheat", false, 2.99);
         $this->addItem("Soup of the day", "Soup of the day,with a side of potato salad", false, 3.29);
@@ -34,7 +32,7 @@ class DinerMenu
         return $this->menuItems;
     }
 
-    public function createIterator()
+    public function createIterator() : Iterator
     {
         return new DinerMenuIterator($this->menuItems);
     }

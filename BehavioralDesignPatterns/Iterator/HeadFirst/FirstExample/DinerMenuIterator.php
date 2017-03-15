@@ -16,13 +16,12 @@ class DinerMenuIterator implements Iterator
     {
         $menuItem = $this->menuItems[$this->position];
         $this->position++;
-
         return $menuItem;
     }
 
     public function hasNext() : bool
     {
-        if ($this->position >= count($this->menuItems) || $this->menuItems[$this->position] == null) {
+        if ($this->position >= count($this->menuItems) || !isset($this->menuItems[$this->position]) || $this->menuItems[$this->position] == null) {
             return false;
         } else {
             return true;

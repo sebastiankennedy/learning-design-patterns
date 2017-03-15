@@ -10,4 +10,7 @@ use BehavioralDesignPatterns\Iterator\HeadFirst\FirstExample\{
     Waitress, DinerMenu, PancakeHouseMenu
 };
 
-$waitress = new Waitress(new DinerMenu(), new PancakeHouseMenu());
+$dinerMenu = new DinerMenu();
+$pancakeHouseMenu = new PancakeHouseMenu();
+$waitress = new Waitress($dinerMenu, $pancakeHouseMenu);
+$waitress->printMenu();

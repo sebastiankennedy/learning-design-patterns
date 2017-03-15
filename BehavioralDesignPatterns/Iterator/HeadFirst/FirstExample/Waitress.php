@@ -13,17 +13,17 @@ class Waitress
         $this->pancakeHouseMenu = $pancakeHouseMenu;
     }
 
-    public function printMenu()
+    public function printMenu() : void
     {
         $dinerMenuIterator = $this->dinerMenu->createIterator();
         $pancakeHouseMenuIterator = $this->pancakeHouseMenu->createIterator();
-        echo "Menus\n -----\n Breakfast";
+        echo "Menus\n-----\nBreakfast";
         $this->printMenuByIterator($dinerMenuIterator);
-        echo "-----\n Lunch";
+        echo "-----\nLunch\n";
         $this->printMenuByIterator($pancakeHouseMenuIterator);
     }
 
-    public function printMenuByIterator(Iterator $iterator)
+    public function printMenuByIterator(Iterator $iterator) : void
     {
         while ($iterator->hasNext()) {
             $menuItem = $iterator->next();
@@ -31,22 +31,22 @@ class Waitress
         }
     }
 
-    public function printBreakfastMenu()
+    public function printBreakfastMenu() : void
     {
 
     }
 
-    public function printLunchMenu()
+    public function printLunchMenu() : void
     {
 
     }
 
-    public function printVegetarianMenu()
+    public function printVegetarianMenu() : void
     {
 
     }
 
-    public function isItemVegetarian($name)
+    public function isItemVegetarian($name) : bool
     {
 
     }

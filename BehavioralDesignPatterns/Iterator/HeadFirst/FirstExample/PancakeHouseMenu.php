@@ -26,7 +26,7 @@ class PancakeHouseMenu
         return $this->menuItems;
     }
 
-    public function createIterator()
+    public function createIterator() : Iterator
     {
         return new PancakeHouseMenuIterator($this->menuItems);
     }

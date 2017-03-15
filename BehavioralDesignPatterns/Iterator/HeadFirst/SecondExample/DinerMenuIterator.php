@@ -1,5 +1,5 @@
 <?php
-namespace BehavioralDesignPatterns\Iterator\HeadFirst;
+namespace BehavioralDesignPatterns\Iterator\HeadFirst\SecondExample;
 
 use Iterator;
 
