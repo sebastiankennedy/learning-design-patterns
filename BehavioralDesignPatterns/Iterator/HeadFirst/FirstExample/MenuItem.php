@@ -8,7 +8,7 @@ class MenuItem
     public $vegetarian;
     public $price;
 
-    public function __construct(string $name, string $description, bool $vegetarian, double $price)
+    public function __construct(string $name, string $description, bool $vegetarian, float $price)
     {
         $this->name = $name;
         $this->description = $description;
@@ -26,7 +26,7 @@ class MenuItem
         return $this->description;
     }
 
-    public function getPrice() : double
+    public function getPrice() : float
     {
         return $this->price;
     }

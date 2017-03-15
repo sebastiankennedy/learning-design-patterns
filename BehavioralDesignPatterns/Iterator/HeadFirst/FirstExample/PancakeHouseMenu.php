@@ -15,7 +15,7 @@ class PancakeHouseMenu
         $this->addItem("Waffles", "Waffles,with your choice of blueberries or strawberries", true, 3.59);
     }
 
-    public function addItem(string $name, string $description, bool $vegetarian, double $price) : void
+    public function addItem(string $name, string $description, bool $vegetarian, float $price) : void
     {
         $menu = new MenuItem($name, $description, $vegetarian, $price);
         $this->menuItems[] = $menu;

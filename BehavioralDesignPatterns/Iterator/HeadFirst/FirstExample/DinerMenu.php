@@ -18,7 +18,7 @@ class DinerMenu
         $this->addItem("Hot dog", "A ot dog, with saurkraut,relish,onions,topped with cheese", false, 3.05);
     }
 
-    public function addItem(string $name, string $description, bool $vegetarian, double $price) : void
+    public function addItem(string $name, string $description, bool $vegetarian, float $price) : void
     {
         $menuItem = new MenuItem($name, $description, $vegetarian, $price);
         if ($this->numberOfItems >= self::MAX_ITEMS) {
