@@ -1,7 +1,7 @@
 <?php
 namespace BehavioralDesignPatterns\Iterator\HeadFirst\FirstExample;
 
-class DinerMenuIterator implements Iterator
+class PancakeHouseMenuIterator implements Iterator
 {
     public $menuItems;
     public $position;

@@ -1,6 +1,8 @@
 <?php
 namespace BehavioralDesignPatterns\Iterator\HeadFirst\FirstExample;
 
+use BehavioralDesignPatterns\Iterator\HeadFirst\DinerMenuIterator;
+
 class DinerMenu
 {
     const MAX_ITEMS = 6;
@@ -30,5 +32,10 @@ class DinerMenu
     public function getMenuItems() : array
     {
         return $this->menuItems;
+    }
+
+    public function createIterator()
+    {
+        return new DinerMenuIterator($this->menuItems);
     }
 }
