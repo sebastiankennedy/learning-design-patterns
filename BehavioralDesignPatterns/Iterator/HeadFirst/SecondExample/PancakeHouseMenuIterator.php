@@ -3,7 +3,7 @@ namespace BehavioralDesignPatterns\Iterator\HeadFirst\SecondExample;
 
 use Iterator;
 
-class DinerMenuIterator implements Iterator
+class PancakeHouseMenuIterator implements Iterator
 {
     public $menuItems;
     public $position;
@@ -44,19 +44,5 @@ class DinerMenuIterator implements Iterator
     public function rewind()
     {
 
-    }
-
-    public function remove()
-    {
-        if ($this->position <= 0) {
-            throw new \Exception("You can't remove an item until you 've done at least one next()");
-        }
-
-        if ($this->menuItems[$this->position - 1] != null) {
-            for ($i = $this->position - 1; $i < count($this->menuItems) - 1; $i++) {
-                $this->menuItems[$i] = $this->menuItems[$i + 1];
-            }
-            $this->menuItems[count($this->menuItems) - 1] = null;
-        }
     }
 }
