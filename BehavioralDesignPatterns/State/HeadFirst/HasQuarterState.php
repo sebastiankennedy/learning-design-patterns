@@ -12,12 +12,13 @@ class HasQuarterState implements State
 
     public function insertQuarter() : void
     {
-        echo "You inserted a quarter.\n";
+        echo "You can't insert another quarter.\n";
     }
 
     public function ejectQuarter() : void
     {
         echo "Quarter returned.\n";
+        $this->gumballMachine->setState($this->gumballMachine->getNoQuarterState());
     }
 
     public function tumCrank() : void
