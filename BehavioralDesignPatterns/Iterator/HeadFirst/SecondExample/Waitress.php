@@ -27,7 +27,7 @@ class Waitress
 
     public function printMenuByIterator(Iterator $iterator) : void
     {
-        while ($iterator->hasNext()) {
+        while ($iterator->valid()) {
             $menuItem = $iterator->next();
             echo sprintf("%s, %1.2f --%s.\n", $menuItem->getName(), $menuItem->getPrice(), $menuItem->getDescription());
         }
