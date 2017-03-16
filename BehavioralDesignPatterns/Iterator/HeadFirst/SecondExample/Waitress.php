@@ -9,20 +9,24 @@ class Waitress
     public $pancakeHouseMenu;
     public $dinerMenu;
 
-    public function __construct(DinerMenu $dinerMenu, PancakeHouseMenu $pancakeHouseMenu)
+    public function __construct(DinerMenu $dinerMenu, PancakeHouseMenu $pancakeHouseMenu, CafeMenu $cafeMenu)
     {
+        $this->cafeMenu = $cafeMenu;
         $this->dinerMenu = $dinerMenu;
         $this->pancakeHouseMenu = $pancakeHouseMenu;
     }
 
     public function printMenu() : void
     {
+        $cafeMenuIterator = $this->cafeMenu->createIterator();
         $dinerMenuIterator = $this->dinerMenu->createIterator();
         $pancakeHouseMenuIterator = $this->pancakeHouseMenu->createIterator();
-        echo "Menus\n-----\nBreakfast";
+        echo "Menus\n-----\nBreakfast\n";
         $this->printMenuByIterator($dinerMenuIterator);
         echo "-----\nLunch\n";
         $this->printMenuByIterator($pancakeHouseMenuIterator);
+        echo "-----\nDinner\n";
+        $this->printMenuByIterator($cafeMenuIterator);
     }
 
     public function printMenuByIterator(Iterator $iterator) : void
