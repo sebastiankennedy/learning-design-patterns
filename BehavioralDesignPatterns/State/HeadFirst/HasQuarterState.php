@@ -24,18 +24,11 @@ class HasQuarterState implements State
     public function tumCrank() : void
     {
         echo "You turned..";
-        $this->gumballMachine->state = gumballMachine::SOLD;
+        $this->gumballMachine->setState($this->gumballMachine->getSoldState());
     }
 
     public function dispense() : void
     {
-        echo "A gumball comes rolling out the slot.\n";
-        $this->gumballMachine->count--;
-        if ($this->gumballMachine->count == 0) {
-            echo "Oops, out of gumballs!\n";
-            $this->gumballMachine->state = gumballMachine::SOLD_OUT;
-        } else {
-            $this->gumballMachine->state = gumballMachine::NO_QUARTER;
-        }
+        echo "No gumball dispensed.\n";
     }
 }

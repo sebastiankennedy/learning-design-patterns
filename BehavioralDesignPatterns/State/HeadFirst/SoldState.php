@@ -27,6 +27,12 @@ class SoldState implements State
 
     public function dispense() : void
     {
-        echo "A gumball comes rolling out the slot.\n";
+        $this->gumballMachine->releaseBall();
+        if ($this->gumballMachine->count > 0) {
+            $this->gumballMachine->setState($this->gumballMachine->getNoQuarterState());
+        } else {
+            echo "Oops, out of gumballs!\n";
+            $this->gumballMachine->setState($this->gumballMachine->getSoldOutState());
+        }
     }
 }
