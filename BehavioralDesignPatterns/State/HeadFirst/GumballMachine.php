@@ -3,17 +3,10 @@ namespace BehavioralDesignPatterns\State\HeadFirst;
 
 class GumballMachine
 {
-    // 状态
-    const SOLD_OUT = 0;
-    const NO_QUARTER = 1;
-    const HAS_QUARTER = 2;
-    const SOLD = 3;
-
     // 追踪实例的状态
-    public $state = self::SOLD_OUT;
-    public $count = 0;
-
+    protected $count = 0;
     protected $soldState;
+    protected $winnerState;
     protected $soldOutState;
     protected $noQuarterState;
     protected $hasQuarterState;
@@ -21,6 +14,7 @@ class GumballMachine
     public function __construct(int $numberGumballs)
     {
         $this->soldState = new SoldState($this);
+        $this->winnerState = new WinnerState($this);
         $this->soldOutState = new SoldOutState($this);
         $this->noQuarterState = new NoQuarterState($this);
         $this->hasQuarterState = new HasQuarterState($this);
@@ -78,6 +72,10 @@ class GumballMachine
     public function getHasQuarterState()
     {
         return $this->hasQuarterState;
+    }
+
+    public function getCount(){
+        return $this->count;
     }
 }
 
