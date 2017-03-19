@@ -79,7 +79,17 @@ class GumballMachine
         return $this->winnerState;
     }
 
-    public function getCount(){
+    public function __toString()
+    {
+        $string = "Mighty Gumball, Inc.\n";
+        $string .= "PHP-enabled Standing Gumball Model #2017.\n";
+        $string .= "Inventory: " . $this->getCount() . ".\n";
+        $string .= "Machine is waiting for quarter.\n";
+        return $string;
+    }
+
+    public function getCount()
+    {
         return $this->count;
     }
 }
