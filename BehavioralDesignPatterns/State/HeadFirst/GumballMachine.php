@@ -26,7 +26,7 @@ class GumballMachine
         $this->hasQuarterState = new HasQuarterState($this);
 
         $this->count = $numberGumballs;
-        if ($numberGumballs > 0) {
+        if ($this->count > 0) {
             $this->state = $this->noQuarterState;
         }
     }
@@ -49,11 +49,15 @@ class GumballMachine
     public function turnCrank()
     {
         $this->state->tumCrank();
+        $this->state->dispense();
     }
 
     public function releaseBall()
     {
         echo "A gumball comes rolling out the slot...\n";
+        if ($this->count != 0) {
+            $this->count--;
+        }
     }
 
     public function getSoldState()
