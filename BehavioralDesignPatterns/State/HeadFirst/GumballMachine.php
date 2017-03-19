@@ -74,6 +74,11 @@ class GumballMachine
         return $this->hasQuarterState;
     }
 
+    public function getWinnerState()
+    {
+        return $this->winnerState;
+    }
+
     public function getCount(){
         return $this->count;
     }
