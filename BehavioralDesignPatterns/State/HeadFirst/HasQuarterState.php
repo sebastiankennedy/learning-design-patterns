@@ -8,8 +8,8 @@ class HasQuarterState implements State
 
     public function __construct(GumballMachine $gumballMachine)
     {
-        $array = range(1, 20);
-        $this->randomWinner = $array[array_rand($array)] % 2;
+
+        $this->randomWinner = range(1, 20);
         $this->gumballMachine = $gumballMachine;
     }
 
@@ -26,8 +26,9 @@ class HasQuarterState implements State
 
     public function tumCrank() : void
     {
-        echo "You turned..";
-        if ($this->randomWinner == 0 && $this->gumballMachine->getCount()) {
+        echo "You turned..\n";
+        $randNum = $this->randomWinner[array_rand($this->randomWinner)] % 10;
+        if ($randNum == 0 && $this->gumballMachine->getCount()) {
             $this->gumballMachine->setState($this->gumballMachine->getWinnerState());
         } else {
             $this->gumballMachine->setState($this->gumballMachine->getSoldState());
