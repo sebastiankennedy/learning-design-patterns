@@ -1,5 +1,5 @@
 <?php
-namespace AbstractFactory\FirstExample;
+namespace CreationalDesignPatterns\AbstractFactory\PhpObjectsPatternsAndPractice;
 
 class BloggsTtdEncoder extends TtdEncoder{
     public function encode() : string

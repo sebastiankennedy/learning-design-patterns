@@ -1,5 +1,5 @@
 <?php
-namespace AbstractFactory\FirstExample;
+namespace CreationalDesignPatterns\AbstractFactory\PhpObjectsPatternsAndPractice;
 
 class MegaApptEncoder extends ApptEncoder{
     public function encode() : string

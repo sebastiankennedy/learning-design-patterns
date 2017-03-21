@@ -1,5 +1,5 @@
 <?php
-namespace AbstractFactory\FirstExample;
+namespace CreationalDesignPatterns\AbstractFactory\PhpObjectsPatternsAndPractice;
 
 class MegaCommsManager extends CommsManager
 {
