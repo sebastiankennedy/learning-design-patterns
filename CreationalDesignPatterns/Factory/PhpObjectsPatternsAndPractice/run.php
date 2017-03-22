@@ -5,7 +5,7 @@ function autoload($class)
     require '../../../' . str_replace('\\', '/', $class) . '.php';
 }
 
-use Factory\FirstExample\MegaCommsManager;
+use CreationalDesignPatterns\Factory\HeadFirst\MegaCommsManager;
 
 $mega = new MegaCommsManager();
 $encoder = $mega->getApptEncoder();
