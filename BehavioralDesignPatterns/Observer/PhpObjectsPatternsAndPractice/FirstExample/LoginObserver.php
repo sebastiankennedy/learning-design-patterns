@@ -1,5 +1,5 @@
 <?php
-namespace Observer\FirstExample;
+namespace BehavioralDesignPatterns\Observer\PhpObjectsPatternsAndPractice\FirstExample;
 
 abstract class LoginObserver implements Observer
 {

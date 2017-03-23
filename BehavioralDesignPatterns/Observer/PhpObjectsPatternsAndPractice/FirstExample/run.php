@@ -7,10 +7,9 @@ function autoload($class)
     require '../../../../' . str_replace('\\', '/', $class) . '.php';
 }
 
-use Observer\FirstExample\Login;
-use Observer\FirstExample\SecurityMonitor;
-use Observer\FirstExample\GeneralLogger;
-use Observer\FirstExample\PartnershipTool;
+use BehavioralDesignPatterns\Observer\PhpObjectsPatternsAndPractice\FirstExample\{
+    Login, SecurityMonitor, GeneralLogger, PartnershipTool
+};
 
 $login = new Login();
 $login->attach(new SecurityMonitor());
