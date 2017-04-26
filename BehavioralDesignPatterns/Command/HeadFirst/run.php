@@ -1,4 +1,5 @@
 <?php
+
 spl_autoload_register('autoload');
 
 function autoload($class)
@@ -17,13 +18,16 @@ use BehavioralDesignPatterns\Command\HeadFirst\{
     MacroCommand
 };
 
+// 调用者
 $light = new Light();
 $stereo = new Stereo();
+// 具体命令
 $lightOnCommand = new LightOnCommand($light);
 $lightOffCommand = new LightOffCommand($light);
 $stereoOnWithCDCommand = new StereoOnWithCDCommand($stereo);
 $stereoOffCommand = new StereoOffCommand($stereo);
 
+// 接收者
 $remoteControl = new RemoteControl();
 $remoteControl->setCommand(0, $lightOnCommand, $lightOffCommand);
 $remoteControl->setCommand(1, $stereoOnWithCDCommand, $stereoOffCommand);
